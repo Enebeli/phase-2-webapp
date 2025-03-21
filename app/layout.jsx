@@ -2,7 +2,6 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { usePathname } from "next/navigation";
 import Navbar from "./components/Navbar";
 
 const geistSans = Geist({
@@ -15,8 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function RootLayout({ children }) {
-  const pathname = usePathname();
+export default function RootLayout({children}) {
 
   return (
     <html lang="en">
@@ -24,10 +22,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div>
-          <Navbar />   
-          {pathname !== "/dashboard" &&
-            pathname !== "/login" &&
-            pathname !== "/register" && <></>}
+          <Navbar /> 
           {children}
         </div>
       </body>
