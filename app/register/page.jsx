@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import "./register.css";
+import Button from "../components/Button";
+import InputField from "../components/InputField";
+import ErrorMessage from "../components/ErrorMessage";
+import FormContainer from "../components/FormContainer";
 
 export default function RegisterPage() {
   const [email, setEmail] = useState("");
@@ -46,61 +49,16 @@ export default function RegisterPage() {
   };
 
   return (
-      <div className="register-container">
-      <h1>Sign-Up</h1>
-      <form onSubmit={handleSubmit} className="login-form">
-        <div className="input-group">
-          <label htmlFor="firstName">First Name:</label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            required
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="lastName">Last Name:</label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            required
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="email@gmail.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="password must be more than 8 characters"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          {passwordError && <p className="error-message">{passwordError}</p>}
-        </div>
-        <button type="submit" className="login-button">
-          Register
-        </button>
-      </form>
-      <p className="login-link">Already have an account? <a href="/login">Log in</a></p>
-      </div>
+    <FormContainer title="Create an account">
+    <form onSubmit={handleSubmit} className="login-form">
+      <InputField label="First Name" type="text" name="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
+      <InputField label="Last Name" type="text" name="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+      <InputField label="Email" type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email@gmail.com" required />
+      <InputField label="Password" type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="At least 8 characters" required />
+      <ErrorMessage message={passwordError} />
+      <Button type="submit" variant="primary">Sign Up</Button>
+    </form>
+    <p className="login-link">Already have an account? <a href="/login">Log in</a></p>
+  </FormContainer>
   );
 }
