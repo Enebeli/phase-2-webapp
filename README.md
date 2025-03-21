@@ -24,11 +24,10 @@ Responsive Navigation and Routing
   - [] Style content and make it responsive
 
 ## DEBUG
-- ## DEBUG
 - [DONE] Button was not submitting
   - [DONE] forgot to add type="submit"
-- [] Error pushing commits on github repository
-  - [] File Image is too big, need to resize the file.
+- [DONE] Error pushing commits on github repository
+  - [DONE] File Image is too big, need to resize the file.
 
 
 
