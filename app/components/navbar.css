@@ -1,25 +1,34 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #000000;
-    color: white;
-  }
-  
-  .logo {
-    font-weight: bold;
-    font-size: 1.2em;
-  }
-  
-  
-  .link {
-    margin-right: 10px;
-    text-decoration: none;
-    color: white;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: white;
+}
 
-  .link:hover {
-    color: #6587f6;
-    text-decoration: underline;
-  }
+.logo {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+
+.link {
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.signup-link {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+.link:hover {
+  color: #6587f6;
+  text-decoration: underline;
+}
