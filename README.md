@@ -5,13 +5,13 @@ Responsive Navigation and Routing
 
 ## GOALS
 - [  ] Code optimization
-  - [] CSS so that there aren't any code competing with each other (Should it be in all separate folders??)
-  - [] Create a reusable button component
-  - [] Input form reusable component
-  - [] Form container reusable component
+  - [DONE] CSS so that there aren't any code competing with each other (Should it be in all separate folders??)
+  - [DONE] Create a reusable button component
+  - [DONE] Input form reusable component
+  - [DONE] Form container reusable component
   - [] Remove login in navbar when user is in dashboard
   - [] Remove signup in navbar when user is in dashboard
-- [] Create a separate header component
+- [DONE] Create a separate header component (NAVBAR)
 - [] Create a separate footer component
 - [] Routing page 1 - About Us
 - [] Routing page 2 - Archive Page 
@@ -24,7 +24,11 @@ Responsive Navigation and Routing
   - [] Style content and make it responsive
 
 ## DEBUG
-- [] 
+- ## DEBUG
+- [DONE] Button was not submitting
+  - [DONE] forgot to add type="submit"
+- [] Error pushing commits on github repository
+  - [] File Image is too big, need to resize the file.
 
 
 
