@@ -40,6 +40,13 @@ function Navbar() {
           </a>
         )}
 
+        {/* Show About link only on Dashboard and Archives */}
+        {(pathname === "/dashboard" || pathname === "/archives") && (
+          <a href="/about" className="link">
+            About
+          </a>
+        )}
+
         {/* Show Logout button only on Dashboard and Archives */}
         {(pathname === "/dashboard" || pathname === "/archives") && (
           <Button onClick={handleLogout} variant="secondary">
