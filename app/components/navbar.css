@@ -16,7 +16,7 @@
 
 
 .link {
-  margin-right: 10px;
+  margin-right: 20px;
   text-decoration: none;
   color: white;
 }
@@ -31,4 +31,10 @@
 .link:hover {
   color: #6587f6;
   text-decoration: underline;
+}
+
+.link.active {
+  font-weight: bold;
+  color: #6587f6;
+  font-style: italic;
 }
