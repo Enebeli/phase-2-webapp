@@ -12,7 +12,8 @@ Responsive Navigation and Routing
   - [DONE] Remove login in navbar when user is in dashboard
   - [DONE] Remove signup in navbar when user is in dashboard
 - [DONE] Create a separate header component (NAVBAR)
-- [] Create a separate footer component
+- [DONE] Create a separate footer component
+- [DONE] Add regex pattern for input fields
 - [] Routing page 1 - About Us
 - [] Routing page 2 - Archive Page 
 
@@ -38,6 +39,8 @@ Responsive Navigation and Routing
 [Template Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 [Conditional Rendering](https://react.dev/learn/conditional-rendering)
 [Passing Props](https://react.dev/learn/passing-props-to-a-component)
+[Understanding Regular Expression - Regex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+
 
 ## TO INSTALL
 - install dependencies (npm install)
