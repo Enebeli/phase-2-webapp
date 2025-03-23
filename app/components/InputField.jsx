@@ -1,8 +1,18 @@
 import React from "react";
 
-export default function InputField({ label, type, name, value, onChange, placeholder, required }) {
+export default function InputField({
+  label,
+  type = "text",
+  name,
+  value,
+  onChange,
+  placeholder,
+  required = false,
+  pattern,
+  title,
+}) {
   return (
-    <div className="input-group">
+    <section className="input-group">
       {label && <label htmlFor={name}>{label}</label>}
       <input
         type={type}
@@ -12,7 +22,9 @@ export default function InputField({ label, type, name, value, onChange, placeho
         onChange={onChange}
         placeholder={placeholder}
         required={required}
+        pattern={pattern}
+        title={title}
       />
-    </div>
+    </section>
   );
 }

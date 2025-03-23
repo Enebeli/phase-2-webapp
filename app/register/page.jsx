@@ -50,15 +50,57 @@ export default function RegisterPage() {
 
   return (
     <FormContainer title="Create an account">
-    <form onSubmit={handleSubmit} className="login-form">
-      <InputField label="First Name" type="text" name="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
-      <InputField label="Last Name" type="text" name="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
-      <InputField label="Email" type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email@gmail.com" required />
-      <InputField label="Password" type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="At least 8 characters" required />
-      <ErrorMessage message={passwordError} />
-      <Button type="submit" variant="primary">Sign Up</Button>
-    </form>
-    <p className="login-link">Already have an account? <a href="/login">Log in</a></p>
-  </FormContainer>
+      <form onSubmit={handleSubmit} className="login-form">
+        <InputField
+          label="First Name"
+          type="text"
+          name="firstName"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          required
+          pattern="^[A-Za-z]+$"
+          title="First name should only contain letters."
+        />
+        <InputField
+          label="Last Name"
+          type="text"
+          name="lastName"
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+          required
+          pattern="^[A-Za-z]+$"
+          title="Last name should only contain letters."
+        />
+        <InputField
+          label="Email"
+          type="email"
+          name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="email@gmail.com"
+          required
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          title="Enter a valid email address."
+        />
+        <InputField
+          label="Password"
+          type="password"
+          name="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="At least 8 characters"
+          required
+          pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+          title="Password must be at least 8 characters long and contain at least one letter and one number."
+        />
+        <ErrorMessage message={passwordError} />
+        <Button type="submit" variant="primary">
+          Sign Up
+        </Button>
+      </form>
+      <p className="login-link">
+        Already have an account? <a href="/login">Log in</a>
+      </p>
+    </FormContainer>
   );
 }
