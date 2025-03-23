@@ -15,21 +15,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function RootLayout({children}) {
-
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div>
-          <Navbar /> 
-          {children}
-        </div>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        
+        <header>
+          <Navbar />
+        </header>
 
-        <div>
+        <main>{children}</main>
+        
+        <footer>
           <PageFooter />
-        </div>
+        </footer>
+
       </body>
     </html>
   );
