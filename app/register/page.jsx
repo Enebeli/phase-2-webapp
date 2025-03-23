@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import InputField from "../components/InputField";
 import ErrorMessage from "../components/ErrorMessage";
 import FormContainer from "../components/FormContainer";
+import SuccessModal from "../components/SuccessModal";
 
 export default function RegisterPage() {
   const [email, setEmail] = useState("");
@@ -12,6 +13,7 @@ export default function RegisterPage() {
   const [passwordError, setPasswordError] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -36,7 +38,12 @@ export default function RegisterPage() {
       });
 
       if (response.ok) {
-        window.location.href = "/dashboard";
+        setShowModal(true);
+
+        setTimeout(() => {
+          window.location.href = "/dashboard?success=true";
+        }, 2000);
+
       } else {
         const errorData = await response.json();
         console.error("Registration failed:", errorData.error);
@@ -98,9 +105,12 @@ export default function RegisterPage() {
           Sign Up
         </Button>
       </form>
+
       <p className="login-link">
         Already have an account? <a href="/login">Log in</a>
       </p>
+
+      {showModal && <SuccessModal message="Redirecting to login page..." onClose={() => setShowModal(false)} />}
     </FormContainer>
   );
 }
