@@ -28,6 +28,11 @@ Responsive Navigation and Routing
   - [DONE] forgot to add type="submit"
 - [DONE] Error pushing commits on github repository
   - [DONE] File Image is too big, need to resize the file.
+- [ ] fix button hydration
+- [ ] add footer
+- [ ] fix the navbar links, signup should alis if nasa signup page na
+      archive is not showing on about us
+      
 
 
 
@@ -35,6 +40,10 @@ Responsive Navigation and Routing
 ## RESOURCES
 [Deploy Directus on Render.com](https://blog.jamin.sh/how-to-deploy-directus-to-rendercom)
 [Directus Authentication in Next JS](https://directus.io/docs/tutorials/getting-started/using-authentication-in-next-js)
+[Template Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+[Conditional Rendering](https://react.dev/learn/conditional-rendering)
+[Passing Props](https://react.dev/learn/passing-props-to-a-component)
+
 
 
 
