@@ -35,6 +35,7 @@ function Navbar() {
   ];
 
   const authLinks = [
+    { href: "/dashboard", label: "Dashboard"},
     { href: "/login", label: "Login" },
     { href: "/register", label: "Sign Up" },
   ];
