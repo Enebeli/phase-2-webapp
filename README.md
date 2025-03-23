@@ -4,13 +4,13 @@
 Responsive Navigation and Routing
 
 ## GOALS
-- [  ] Code optimization
+- [DONE] Code optimization
   - [DONE] CSS so that there aren't any code competing with each other (Should it be in all separate folders??)
   - [DONE] Create a reusable button component
   - [DONE] Input form reusable component
   - [DONE] Form container reusable component
-  - [] Remove login in navbar when user is in dashboard
-  - [] Remove signup in navbar when user is in dashboard
+  - [DONE] Remove login in navbar when user is in dashboard
+  - [DONE] Remove signup in navbar when user is in dashboard
 - [DONE] Create a separate header component (NAVBAR)
 - [] Create a separate footer component
 - [] Routing page 1 - About Us
@@ -28,14 +28,9 @@ Responsive Navigation and Routing
   - [DONE] forgot to add type="submit"
 - [DONE] Error pushing commits on github repository
   - [DONE] File Image is too big, need to resize the file.
-- [ ] fix button hydration
+- [DONE] fix button hydration - installed prop-types 
 - [ ] add footer
-- [ ] fix the navbar links, signup should alis if nasa signup page na
-      archive is not showing on about us
-      
-
-
-
+- [DONE] fix the navbar links - properly show the links being rendered in each page
 
 ## RESOURCES
 [Deploy Directus on Render.com](https://blog.jamin.sh/how-to-deploy-directus-to-rendercom)
@@ -44,9 +39,7 @@ Responsive Navigation and Routing
 [Conditional Rendering](https://react.dev/learn/conditional-rendering)
 [Passing Props](https://react.dev/learn/passing-props-to-a-component)
 
-
-
-
 ## TO INSTALL
 - install dependencies (npm install)
-- install directus/sdk ( npm install @directus/sdk)
+- install directus/sdk (npm install @directus/sdk)
+- install prop-types used in navbar (npm install prop-types)
