@@ -31,7 +31,7 @@ export default async function LandingPage() {
         <nav>
           <Link href="/login">
             <Button variant="primary" aria-label="Get started with Pen & Pixel">
-              Get Started
+             Login to Continue
             </Button>
           </Link>
         </nav>
