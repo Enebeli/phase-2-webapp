@@ -1,11 +1,11 @@
-import directus from '@/lib/directus';
-import { readItems } from '@directus/sdk';
-import Link from 'next/link';
-import './landingpage.css'; 
-import Button from './components/Button';
+import directus from "@/lib/directus";
+import { readItems } from "@directus/sdk";
+import Link from "next/link";
+import "./landingpage.css";
+import Button from "./components/Button";
 
 async function getGlobalData() {
-  return directus.request(readItems('global'));
+  return directus.request(readItems("global"));
 }
 
 export default async function LandingPage() {
@@ -24,12 +24,15 @@ export default async function LandingPage() {
         </header>
 
         <p className="static-info">
-          Explore the latest articles, insights, and discussions on design, creativity, and digital storytelling.
+          Explore the latest articles, insights, and discussions on design,
+          creativity, and digital storytelling.
         </p>
 
         <nav>
           <Link href="/login">
-            <Button variant="primary">Get Started</Button>
+            <Button variant="primary" aria-label="Get started with Pen & Pixel">
+              Get Started
+            </Button>
           </Link>
         </nav>
       </article>
