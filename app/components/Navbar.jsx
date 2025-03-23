@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import Button from "./Button";
 import "./navbar.css";
 
+function NavLink({ href, label, isActive, onClick }) {
+  return (
+    <a
+      href={href}
+      className={`link ${isActive ? "active" : ""}`}
+      onClick={() => onClick(href)}
+    >
+      {label}
+    </a>
+  );
+}
+
 function Navbar() {
   const pathname = usePathname();
+  const [activeLink, setActiveLink] = useState(pathname);
 
   const handleLogout = async () => {
     try {
@@ -22,50 +35,62 @@ function Navbar() {
     }
   };
 
+  const handleClick = (href) => {
+    setActiveLink(href);
+  };
+
+  const mainLinks = [
+    { href: "/dashboard", label: "Dashboard" },
+    { href: "/archives", label: "Archives" },
+    { href: "/about", label: "About" },
+  ];
+
+  const authLinks = [
+    { href: "/login", label: "Login" },
+    { href: "/register", label: "Sign Up" },
+  ];
+
+  const showMainLinks = ["/dashboard", "/archives", "/about"].includes(pathname);
+
   return (
     <nav className="navbar">
-      <a href="/" className="logo">
+      <a href="/" className="logo" onClick={() => handleClick("/")}>
         PEN & PIXEL
       </a>
 
       <div className="links">
-        <a href="/dashboard" className="link">
-          Dashboard
-        </a>
+        <NavLink
+          href="/dashboard"
+          label="Dashboard"
+          isActive={activeLink === "/dashboard"}
+          onClick={handleClick}
+        />
 
-        {/* Show Archives on both Dashboard and Archives pages */}
-        {(pathname === "/dashboard" || pathname === "/archives") && (
-          <a href="/archives" className="link">
-            Archives
-          </a>
-        )}
+        {showMainLinks &&
+          mainLinks.slice(1).map((link) => (
+            <NavLink
+              key={link.href}
+              href={link.href}
+              label={link.label}
+              isActive={activeLink === link.href}
+              onClick={handleClick}
+            />
+          ))}
 
-        {/* Show About link only on Dashboard and Archives */}
-        {(pathname === "/dashboard" || pathname === "/archives") && (
-          <a href="/about" className="link">
-            About
-          </a>
-        )}
+        {showMainLinks && <Button onClick={handleLogout} variant="secondary">Logout</Button>}
 
-        {/* Show Logout button only on Dashboard and Archives */}
-        {(pathname === "/dashboard" || pathname === "/archives") && (
-          <Button onClick={handleLogout} variant="secondary">
-            Logout
-          </Button>
-        )}
-
-        {/* Show Login and Signup only when NOT on Dashboard or Archives */}
-        {pathname !== "/dashboard" && pathname !== "/archives" && (
-          <>
-            <a href="/login" className="link">Login</a>
-            <Button variant="secondary" onClick={() => (window.location.href = "/register")}>
-              Sign Up
-            </Button>
-          </>
-        )}
+        {!showMainLinks &&
+          authLinks.map((link) => (
+            <NavLink
+              key={link.href}
+              href={link.href}
+              label={link.label}
+              isActive={activeLink === link.href}
+              onClick={link.href === "/register" ? () => {handleClick(link.href); window.location.href = link.href;} : handleClick}
+            />
+          ))}
       </div>
     </nav>
   );
 }
-
 export default Navbar;
