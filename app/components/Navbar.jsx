@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import Button from "./Button";
 import "./navbar.css";
+import PropTypes from "prop-types";
 
 function NavLink({ href, label, isActive, onClick }) {
   return (
@@ -14,6 +15,13 @@ function NavLink({ href, label, isActive, onClick }) {
     </a>
   );
 }
+
+NavLink.propTypes = {
+  href: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
 
 function Navbar() {
   const pathname = usePathname();
