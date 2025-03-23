@@ -2,13 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./button.css";
 
-const Button = ({ children, onClick, type = "button", variant = "primary", disabled = false }) => {
+const Button = ({ children, onClick, type = "button", variant = "primary", disabled = false, ...props }) => {
   return (
     <button 
       className={`custom-button ${variant}`} 
       onClick={onClick} 
       type={type} 
       disabled={disabled}
+      {...props} 
     >
       {children}
     </button>
