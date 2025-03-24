@@ -7,6 +7,7 @@ import "./pagenavbar.css";
 function Navbar() {
   const pathname = usePathname();
   const [activeLink, setActiveLink] = useState(pathname);
+  const [menuOpen, setMenuOpen] = useState(false); // State to track menu open/close
 
   const handleLogout = async () => {
     try {
@@ -26,6 +27,7 @@ function Navbar() {
 
   const handleClick = (href) => {
     setActiveLink(href);
+    setMenuOpen(false); // Close menu on link click
   };
 
   const mainLinks = [
@@ -35,15 +37,18 @@ function Navbar() {
   ];
 
   const authLinks = [
-    { href: "/dashboard", label: "Dashboard"},
+    { href: "/dashboard", label: "Dashboard" },
     { href: "/login", label: "Login" },
     { href: "/register", label: "Sign Up" },
   ];
 
-  const showMainLinks = ["/dashboard", "/archives", "/about"].includes(pathname);
+  const showMainLinks = ["/dashboard", "/archives", "/about"].includes(
+    pathname
+  );
 
   return (
     <nav className="navbar" aria-label="Main navigation">
+      {/* Logo */}
       <a
         href="/"
         className="logo"
@@ -53,7 +58,17 @@ function Navbar() {
         PEN & PIXEL
       </a>
 
-      <div className="links">
+      {/* Burger Icon */}
+      <button
+        className="burger-menu"
+        aria-label="Toggle navigation menu"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰
+      </button>
+
+      {/* Navigation Links */}
+      <div className={`links ${menuOpen ? "open" : ""}`}>
         {showMainLinks
           ? mainLinks.map((link) => (
               <NavLink
