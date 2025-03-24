@@ -1,5 +1,4 @@
 ### READ ME
-
 --- Project Phase 2 --- 
 Responsive Navigation and Routing
 
@@ -7,6 +6,7 @@ Responsive Navigation and Routing
 - install dependencies (npm install)
 - install directus/sdk (npm install @directus/sdk)
 - install prop-types used in navbar (npm install prop-types)
+- this project is deployed on Vercel (https://phase-2-webapp.vercel.app/)
 
 ## GOALS
 - [DONE] Code optimization
@@ -38,6 +38,14 @@ Responsive Navigation and Routing
   - properly show the links being rendered in each page
 - [FIXED] navlinks breaking when size reaches 600 px
   - changed into a burger menu when screen size is 600px below.
+
+## DELEGATION OF WORK
+[Alyanna] - in charge of optimizing the code
+[Marshall] - in charge of making sure the first routing works (About Page)
+[Jahswill] - in charge of making sure the 2nd routing works (Archives)
+  # Online Collaborative Tool - Figjam 
+   - [Figjam Link for Code Optimization](https://www.figma.com/board/oQ1lZgnoHZz4e9IKuRaffA/Code-Optimization?node-id=0-1&p=f&t=8z4ZLF5FhIWlmSUF-0)
+   - [Figjam Link for Code Learning as a Group](https://www.figma.com/board/KR0hROzfDr24U9GGr3UCSZ/Phase-2?node-id=0-1&p=f&t=w8Y2uD2SwzFrHsb4-0)
 
 ## RESOURCES
 [Deploy Directus on Render.com](https://blog.jamin.sh/how-to-deploy-directus-to-rendercom)
