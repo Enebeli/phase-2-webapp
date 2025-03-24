@@ -1,43 +1,59 @@
 ### READ ME
 --- Project Phase 2 --- 
-Responsive Navigation and Routing
+This project focuses on optimizing code, implementing responsive navigation, and ensuring proper routing. The application is built with Next.js and integrates Directus as a headless CMS.
+
+🚀 Live Demo
+- [Phase 2](https://phase-2-webapp.vercel.app/)
 
 ## TO INSTALL
 - install dependencies (npm install)
 - install directus/sdk (npm install @directus/sdk)
 - install prop-types used in navbar (npm install prop-types)
-- this project is deployed on Vercel (https://phase-2-webapp.vercel.app/)
+- You will need a .env.local file for this project to run
+- npm run dev (The app should now be running at http://localhost:3000)
 
 ## GOALS
 - [DONE] Code optimization
-  - [DONE] CSS so that there aren't any code competing with each other (Should it be in all separate folders??)
-  - [DONE] Create a reusable button component
-  - [DONE] Input form reusable component
-  - [DONE] Form container reusable component
-  - [DONE] Remove login in navbar when user is in dashboard
-  - [DONE] Remove signup in navbar when user is in dashboard
+  - [DONE] CSS Refactoring: Ensure styles do not conflict (organized into separate files if necessary)
+  - [DONE] Create a reusable components
+      - [DONE] Button
+      - [DONE] Input Form
+      - [DONE] Form Container
+  - [DONE] Navigation updates
+      - Hide "Login" and "Signup" in navbar when user is in the dashboard.
 - [DONE] Create a separate header component (NAVBAR)
 - [DONE] Create a separate footer component
 - [DONE] Add regex pattern for input fields
-- [DONE] Routing page 1 - About Us
-- [DONE] Routing page 2 - Archive Page 
-
+- [DONE] Routing Implementation
+    - [DONE] Route 1 - Archive Page
+    - [DONE] Route 2 - About Page
+ 
 - Modularization:
   - [DONE] Review code to plan for DRY high level (layouts)
   - [DONE] Outline and build components (minimal styles, focus on functionality)
   - [DONE] Style content and make it responsive
 
-## DEBUG
-- [FIXED] Button was not submitting
-  - forgot to add type="submit"
-- [FIXED] Error pushing commits on github repository
-  - File Image is too big, need to resize the file.
-- [FIXED] fix button hydration
-  -  installed prop-types 
-- [FIXED] fix the navbar links
-  - properly show the links being rendered in each page
-- [FIXED] navlinks breaking when size reaches 600 px
-  - changed into a burger menu when screen size is 600px below.
+## Debugging Notes
+✅ Fixed Issues:
+1. **Button was not submitting**  
+   **Cause:** `type="submit"` was missing.  
+   **Solution:** Added `type="submit"` to the button element.  
+
+2. **Error pushing commits to GitHub**  
+   **Cause:** Image file was too large.  
+   **Solution:** Resized the image before committing.  
+
+3. **Button hydration issue**  
+   **Cause:** Missing `prop-types` dependency.  
+   **Solution:** Installed `prop-types`.  
+
+4. **Navbar links were broken**  
+   **Cause:** Incorrect rendering logic.  
+   **Solution:** Fixed link rendering per page.  
+
+5. **NavLinks breaking at screen width < 600px**  
+   **Cause:** Responsive styling issue.  
+   **Solution:** Implemented a burger menu for smaller screens.  
 
 ## DELEGATION OF WORK
 - [Alyanna] - in charge of optimizing the code
