@@ -40,18 +40,18 @@ Responsive Navigation and Routing
   - changed into a burger menu when screen size is 600px below.
 
 ## DELEGATION OF WORK
-[Alyanna] - in charge of optimizing the code
-[Marshall] - in charge of making sure the first routing works (About Page)
-[Jahswill] - in charge of making sure the 2nd routing works (Archives)
+- [Alyanna] - in charge of optimizing the code
+- [Marshall] - in charge of making sure the first routing works (About Page)
+- [Jahswill] - in charge of making sure the 2nd routing works (Archives)
   # Online Collaborative Tool - Figjam 
    - [Figjam Link for Code Optimization](https://www.figma.com/board/oQ1lZgnoHZz4e9IKuRaffA/Code-Optimization?node-id=0-1&p=f&t=8z4ZLF5FhIWlmSUF-0)
    - [Figjam Link for Code Learning as a Group](https://www.figma.com/board/KR0hROzfDr24U9GGr3UCSZ/Phase-2?node-id=0-1&p=f&t=w8Y2uD2SwzFrHsb4-0)
 
 ## RESOURCES
-[Deploy Directus on Render.com](https://blog.jamin.sh/how-to-deploy-directus-to-rendercom)
-[Directus Authentication in Next JS](https://directus.io/docs/tutorials/getting-started/using-authentication-in-next-js)
-[Template Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
-[Conditional Rendering](https://react.dev/learn/conditional-rendering)
-[PropTypes](https://nextjs.org/learn/react-foundations/displaying-data-with-props)
-[Passing Props](https://react.dev/learn/passing-props-to-a-component)
-[Understanding Regular Expression - Regex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Deploy Directus on Render.com](https://blog.jamin.sh/how-to-deploy-directus-to-rendercom)
+- [Directus Authentication in Next JS](https://directus.io/docs/tutorials/getting-started/using-authentication-in-next-js)
+- [Template Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+- [Conditional Rendering](https://react.dev/learn/conditional-rendering)
+- [PropTypes](https://nextjs.org/learn/react-foundations/displaying-data-with-props)
+- [Passing Props](https://react.dev/learn/passing-props-to-a-component)
+- [Understanding Regular Expression - Regex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
