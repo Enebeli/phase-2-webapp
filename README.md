@@ -19,14 +19,13 @@ Responsive Navigation and Routing
 - [DONE] Create a separate header component (NAVBAR)
 - [DONE] Create a separate footer component
 - [DONE] Add regex pattern for input fields
-- [] Routing page 1 - About Us
-- [] Routing page 2 - Archive Page 
+- [DONE] Routing page 1 - About Us
+- [DONE] Routing page 2 - Archive Page 
 
 - Modularization:
   - [DONE] Review code to plan for DRY high level (layouts)
-  - [] Review code for needed error handling (user facing and dev facing)
   - [DONE] Outline and build components (minimal styles, focus on functionality)
-  - [] Style content and make it responsive
+  - [DONE] Style content and make it responsive
 
 ## DEBUG
 - [FIXED] Button was not submitting
@@ -37,11 +36,14 @@ Responsive Navigation and Routing
   -  installed prop-types 
 - [FIXED] fix the navbar links
   - properly show the links being rendered in each page
+- [FIXED] navlinks breaking when size reaches 600 px
+  - changed into a burger menu when screen size is 600px below.
 
 ## RESOURCES
 [Deploy Directus on Render.com](https://blog.jamin.sh/how-to-deploy-directus-to-rendercom)
 [Directus Authentication in Next JS](https://directus.io/docs/tutorials/getting-started/using-authentication-in-next-js)
 [Template Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 [Conditional Rendering](https://react.dev/learn/conditional-rendering)
+[PropTypes](https://nextjs.org/learn/react-foundations/displaying-data-with-props)
 [Passing Props](https://react.dev/learn/passing-props-to-a-component)
 [Understanding Regular Expression - Regex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
