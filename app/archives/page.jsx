@@ -19,7 +19,7 @@ const Archives = () => {
             
             <figure className="image-figure">
               <Image
-                src="/archive-1.jpeg"
+                src="/archive-1.jpg"
                 alt="2 ladies looking over sunset"
                 width={400}
                 height={150}
@@ -49,14 +49,65 @@ const Archives = () => {
 
       
         <div className="column">
-          <div className="headline">Headline 2</div>
-          <p>Some text for the second column.</p>
+          <div className="headline">The Power Of Doing Nothing</div>
+          <div className="article-content">
+            
+            <figure className="image-figure">
+              <Image
+                src="/archive 2.png"
+                alt="A guy in a park bench watching the sunset"
+                width={400}
+                height={150}
+                className="article-image"
+              />
+              <figcaption className="image-caption">
+                Guy in park bench watching sunset
+              </figcaption>
+            </figure>
+            <p>
+            In a world that glorifies hustle, rest can feel like a guilty pleasure.
+             But doing nothing, just sitting with your thoughts, can be one of the 
+             most productive things you do. When you pause, you give your mind
+              space to process, reflect, and even heal.
+            </p>
+          </div>
+          <p>
+          We often think that slowing down means falling behind, but it's actually
+           the opposite. Some of our best ideas, decisions, and moments of
+            clarity come when we step back and breathe. Stillness isn't laziness;
+             it's a reset button.
+          </p>
         </div>
 
         
         <div className="column"> 
-          <div className="headline">Headline 3</div>
-          <p>Some text for the third column.</p>
+          <div className="headline">Taking Breaks Makes You Smarter</div>
+          <div className="article-content">
+            
+            <figure className="image-figure">
+              <Image
+                src="/archive 3.png"
+                alt="A guy taking a break from work and sipping coffee"
+                width={400}
+                height={150}
+                className="article-image"
+              />
+              <figcaption className="image-caption">
+                Guy sipping coffee on a break from work
+              </figcaption>
+            </figure>
+            <p>
+            Ever notice how stepping away from a tough problem helps you solve 
+            it faster when you come back? That’s not a coincidence. Breaks 
+            aren’t just for rest—they actually improve focus, memory, and
+             problem-solving.
+            </p>
+          </div>
+          <p>
+          Your brain isn’t meant to go non-stop. A quick walk, a coffee break,
+           or even a few minutes of daydreaming can recharge your mental battery.
+            The smartest minds know when to push and when to pause.
+          </p>
         </div>
       </div>
     </div>
