@@ -48,7 +48,6 @@ function Navbar() {
 
   return (
     <nav className="navbar" aria-label="Main navigation">
-      {/* Logo */}
       <a
         href="/"
         className="logo"
@@ -67,7 +66,6 @@ function Navbar() {
         ☰
       </button>
 
-      {/* Navigation Links */}
       <div className={`links ${menuOpen ? "open" : ""}`}>
         {showMainLinks
           ? mainLinks.map((link) => (
