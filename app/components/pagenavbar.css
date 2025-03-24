@@ -50,6 +50,7 @@
   border: none;
   color: white;
   cursor: pointer;
+  z-index: 1100;
 }
 
 /* Responsive Styles */
@@ -65,10 +66,11 @@
     position: absolute;
     top: 60px;
     right: 10px;
-    background: black;
+    background:black;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1050;
   }
 
   .links.open {
